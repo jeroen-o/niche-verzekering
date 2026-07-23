@@ -2,6 +2,19 @@
 
 Alle noemenswaardige wijzigingen aan deze site. Formaat volgens Keep a Changelog.
 
+## [1.3.1] — 2026-07-23
+
+### Opgelost
+- Horizontaal scrollen op smalle schermen door lange samenstellingen
+  ("Nicheverzekeringen", "Overlijdensrisicoverzekering"): woordafbreking ingeschakeld
+  en de minimale koptekstgrootte verlaagd.
+- Ankerlinks verdwenen onder de vastgezette navigatiebalk: `scroll-padding-top`
+  toegevoegd.
+- De vergelijkingstabel werd op mobiel samengeknepen tot onleesbare kolommen; die
+  scrolt nu horizontaal met een minimumbreedte.
+- Kleinere binnenmarges en volle-breedte knoppen onder 600 px; grotere raakvlakken
+  in de navigatie.
+
 ## [1.3.0] — 2026-07-23
 
 ### Toegevoegd
