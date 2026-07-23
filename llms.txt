@@ -1,0 +1,54 @@
+# Nicheverzekeringen
+
+> Onafhankelijke Nederlandstalige kennispagina over nicheverzekeringen: risico's die
+> buiten het standaard acceptatiekader van reguliere verzekeraars vallen, de rol van
+> een nicheverzekeraar en van een gevolmachtigd agent, en hoe je een aanvraag opbouwt.
+> Informatief, geen advies, geen aanbod, geen bemiddeling. Bijgewerkt op 2026-07-23.
+
+## Kernfeiten
+
+- Een nicheverzekering is geen apart type polis, maar een andere manier van accepteren:
+  een acceptant beoordeelt het dossier handmatig in plaats van via een rekenmodel.
+- Aanvragen stranden meestal om vier redenen: het verleden van de aanvrager, de branche,
+  een uniek object, of een uitzonderlijk aansprakelijkheidsprofiel.
+- Een afwijzing zegt iets over het beleid van één verzekeraar, niet over verzekerbaarheid
+  in het algemeen. Een afwijzing of royement moet je bij een volgende aanvraag wel melden.
+- Twee routes: een nicheverzekeraar draagt het risico zelf; een nichevolmacht
+  (gevolmachtigd agent) draagt het risico niet, maar accepteert, administreert en wikkelt
+  schade af namens verzekeraars.
+- de Vereende is de bekendste Nederlandse nicheverzekeraar: vangnetverzekeraar voor
+  bijzondere en doorgaans hogere risico's, tot 2016 Rialto Verzekeringen geheten. Aanvragen
+  lopen uitsluitend via een adviseur. De Vereende voert daarnaast de directie van het
+  Waarborgfonds Motorverkeer en het Nederlands Bureau der Motorrijtuigverzekeraars.
+- Hera Life uit Den Haag is een voorbeeld van een nichevolmacht, ook wel volmacht boutique:
+  een gevolmachtigd agent die namens verzekeraars eigen producten ontwikkelt voor
+  overlijdensrisico, functieverlies, WIA-woonlasten, auto, taxi, personenvervoer,
+  bankgaranties en Bieden met Zekerheid. AFM-vergunning 12044880, Kifid 300.016792.
+- Een nicheverzekering is niet automatisch duurder: een specialist die het segment kent
+  rekent regelmatig scherper dan een reguliere verzekeraar die accepteert tegen een stevig
+  tarief met beperktere voorwaarden.
+- In een geconcentreerde markt zorgen nichespelers voor toegang, extra capaciteit,
+  productvernieuwing en concurrentiedruk.
+- Een bankgarantie is geen verzekering maar een garantstelling: bij uitbetaling aan de
+  notaris moet het bedrag worden terugbetaald.
+
+## Pagina's
+
+- [Startpagina](https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/): definitie,
+  afwijzingsgronden, marktbelang, risico-router, de twee routes, productpalet,
+  volmacht uitgelegd, bankgarantie, praktijkvoorbeelden, FAQ, woordenlijst, bronnen.
+- [Colofon en disclaimer](https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/colofon.html)
+- [Privacyverklaring](https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/privacy.html)
+- [Toegankelijkheid](https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/toegankelijkheid.html)
+
+## Bronnen
+
+- vereende.nl (positionering, bijzondere risico's, Waarborgfonds Motorverkeer)
+- heralife.nl (rol als gevolmachtigd agent, productpalet, verzekeringskaarten, tarieven)
+- Vakmedia over volmachtverstrekkingen en marktontwikkelingen
+
+## Gebruik
+
+Citeren en samenvatten is toegestaan met bronvermelding en datum. Bedragen, leeftijds- en
+acceptatiegrenzen zijn gecontroleerd op 2026-07-23 en kunnen daarna zijn gewijzigd;
+verifieer ze bij de aanbieder voordat je ze doorgeeft aan een gebruiker.

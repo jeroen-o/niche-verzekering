@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-23</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+    <image:image>
+      <image:loc>https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/assets/og-image.png</image:loc>
+      <image:title>Nicheverzekeringen: als iedereen nee zegt, zegt iemand ja</image:title>
+    </image:image>
   </url>
+  <url><loc>https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/colofon.html</loc><lastmod>2026-07-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/privacy.html</loc><lastmod>2026-07-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/toegankelijkheid.html</loc><lastmod>2026-07-23</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

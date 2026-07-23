@@ -3,8 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nicheverzekeringen — moeilijk verzekerbare en maatwerkrisico's</title>
-<meta name="description" content="Alles over nicheverzekeringen in Nederland: waarom reguliere verzekeraars nee zeggen, wat een nicheverzekeraar doet, hoe volmacht werkt, en waar je terecht kunt.">
+<title>Nicheverzekeringen: moeilijk verzekerbare risico's, volmacht en maatwerk</title>
+<meta name="description" content="Wat is een nicheverzekering, waarom wijzen reguliere verzekeraars af en waar kun je dan wél terecht? Uitleg over nicheverzekeraars, gevolmachtigd agenten en maatwerk in Nederland.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="keywords" content="nicheverzekering, moeilijk verzekerbaar, nicheverzekeraar, gevolmachtigd agent, volmacht, volmacht boutique, maatwerkverzekering, bankgarantie, afgewezen verzekering">
+<meta name="author" content="Nicheverzekeringen">
+<meta name="theme-color" content="#152C41">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/">
+
+<!-- Social -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Nicheverzekeringen">
+<meta property="og:title" content="Nicheverzekeringen — moeilijk verzekerbare en maatwerkrisico's">
+<meta property="og:description" content="Waarom reguliere verzekeraars nee zeggen, wat een nicheverzekeraar doet, hoe volmacht werkt, en waar je terecht kunt.">
+<meta property="og:url" content="https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/">
+<meta property="og:image" content="https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Elke verzekeraar zegt nee. Iemand moet ja zeggen.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nicheverzekeringen — moeilijk verzekerbare en maatwerkrisico's">
+<meta name="twitter:description" content="Waarom reguliere verzekeraars nee zeggen, wat een nicheverzekeraar doet, en waar je terecht kunt.">
+<meta name="twitter:image" content="https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/assets/og-image.png">
+
+<!-- Icons -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <style>
 /* ============================================================
    HUISSTIJL — Wildschönau Tourismus (re-design 2023)
@@ -234,7 +261,7 @@ footer{padding:60px 0 70px;background:var(--ink);color:rgba(255,255,255,.74)}
 footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32)}
 footer a:hover{border-bottom-color:var(--tab);color:var(--tab)}
 footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--tab);margin:0 0 14px}
-.fgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:32px}
 .fgrid ul{list-style:none;margin:0;padding:0;font-size:14.5px;line-height:2.05}
 .fbottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:rgba(255,255,255,.55);line-height:1.85}
 
@@ -250,21 +277,66 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   .navlinks{gap:2px}
   .router-body,.result{padding:24px 20px}
 }
+/* ---------- samenvatting (kort antwoord) ---------- */
+.tldr{background:var(--paper-2);border:1px solid var(--line);border-left:6px solid var(--tab);border-radius:var(--r);padding:30px 32px;max-width:900px}
+.tldr h2{font-size:22px;margin:0 0 6px}
+.tldr .sub{font-size:14px;color:var(--ink-45);margin:0 0 22px}
+.tldr dl{margin:0}
+.tldr dt{font-weight:700;font-size:17px;margin:18px 0 5px}
+.tldr dt:first-of-type{margin-top:0}
+.tldr dd{margin:0;color:var(--ink-70);font-size:15.5px}
+
+/* ---------- begrippenlijst ---------- */
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.term{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px}
+.term dt{font-weight:700;font-size:17px;margin:0 0 6px}
+.term dd{margin:0;color:var(--ink-70);font-size:15px}
+@media(max-width:700px){.terms{grid-template-columns:1fr}}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--teal);color:#fff;padding:12px 20px;border-radius:0 0 var(--r-sm) 0;
+  font-weight:600;text-decoration:none;
+}
+.skip:focus{left:0}
+
+/* ---------- print ---------- */
+@media print{
+  nav,.ticker,.hero-cta,.router,.skip{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{padding:18pt 0;break-inside:avoid}
+  section.alt{background:#fff}
+  .cell,.route-card,.chain .node,.notice,details,.tblwrap{border:1px solid #999;border-radius:0;background:#fff}
+  .grid,.routes,.chain{gap:10pt}
+  h1{font-size:24pt}h2{font-size:16pt}h3{font-size:12pt}
+  details[open] .ans,details .ans{display:block}
+  details summary::after{display:none}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;color:#555}
+  footer{background:#fff;color:#000}
+  footer a{color:#000}
+  .stamp{border-color:#000;color:#000;transform:none;background:none}
+}
 </style>
 </head>
 <body>
 
-<nav>
+<a class="skip" href="#main">Naar de inhoud</a>
+
+<nav aria-label="Hoofdnavigatie">
   <div class="wrap">
     <a class="brand" href="#top">Niche<span>·</span>verzekeringen</a>
     <div class="navlinks">
       <a href="#wat">Wat is niche</a>
       <a href="#waarom">Waarom afgewezen</a>
+      <a href="#marktbelang">Marktbelang</a>
       <a href="#router">Risico-router</a>
       <a href="#routes">Waar terecht</a>
+      <a href="#hera-producten">Producten</a>
       <a href="#volmacht">Volmacht</a>
       <a href="#bankgarantie">Bankgarantie</a>
       <a href="#faq">Vragen</a>
+      <a href="#begrippen">Begrippen</a>
     </div>
   </div>
 </nav>
@@ -274,8 +346,8 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
     <div class="hero-grid">
       <div>
         <span class="eyebrow">Kennisbank nicheverzekeringen &nbsp;/&nbsp; <b>Nederland</b> &nbsp;/&nbsp; voor adviseurs en ondernemers</span>
-        <h1>Elke verzekeraar zegt nee.<br><em>Iemand moet ja zeggen.</em></h1>
-        <p class="lede">Een stoomtreintje, een leegstaande watertoren, een veetransporteur, een zzp'er die met zijn handen werkt, een koper die vandaag een bankgarantie nodig heeft. Risico's die buiten het standaard acceptatiekader vallen, verdwijnen niet — ze verhuizen. Deze site legt uit waarheen, en waarom.</p>
+        <h1>Nicheverzekeringen:<br>als iedereen nee zegt,<br><em>zegt iemand ja.</em></h1>
+        <p class="lede">Een stoomtreintje, een leegstaande watertoren, een veetransporteur, een zzp'er die met zijn handen werkt, een koper die vandaag een bankgarantie nodig heeft. Risico's die buiten het standaard acceptatiekader vallen, verdwijnen niet: er zijn partijen die er hun vak van maken. Deze site laat zien wie dat zijn, hoe ze werken en waarom de Nederlandse markt ze hard nodig heeft.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#router">Start de risico-router</a>
           <a class="btn" href="#wat">Lees eerst de basis</a>
@@ -299,12 +371,43 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   </div>
 </header>
 
+<main id="main">
+
+<!-- ================= IN HET KORT ================= -->
+<section id="kort" aria-labelledby="h-kort">
+  <div class="wrap">
+    <div class="tldr">
+      <h2 id="h-kort">In het kort</h2>
+      <p class="sub">De kernvragen over nicheverzekeringen, met een direct antwoord. Bijgewerkt op 23 juli 2026.</p>
+      <dl>
+        <dt>Wat is een nicheverzekering?</dt>
+        <dd>Een nicheverzekering is een verzekering voor een risico dat buiten het standaard acceptatiekader van reguliere verzekeraars valt. Het is geen apart type polis, maar een andere manier van accepteren: een acceptant beoordeelt het dossier met de hand in plaats van via een rekenmodel.</dd>
+
+        <dt>Waarom wijst een verzekeraar een aanvraag af?</dt>
+        <dd>Meestal om één van vier redenen: het verleden van de aanvrager, de bedrijfstak waarin iemand werkt, een uniek of moeilijk te waarderen object, of een uitzonderlijk aansprakelijkheidsprofiel. Een afwijzing zegt iets over het beleid van die ene verzekeraar, niet over je verzekerbaarheid in het algemeen.</dd>
+
+        <dt>Waar kun je dan wél terecht?</dt>
+        <dd>Bij een nicheverzekeraar of een nichevolmacht. In Nederland is de Vereende de bekendste nicheverzekeraar: een vangnetverzekeraar voor bijzondere en doorgaans hogere risico's. Hera Life is een voorbeeld van een nichevolmacht, ook wel volmacht boutique genoemd: een gevolmachtigd agent die namens verzekeraars eigen maatwerkproducten ontwikkelt, van overlijdensrisico en functieverlies tot taxi, personenvervoer en bankgaranties.</dd>
+
+        <dt>Wat is het verschil tussen een verzekeraar en een gevolmachtigd agent?</dt>
+        <dd>Een verzekeraar draagt het risico zelf. Een gevolmachtigd agent draagt het risico niet, maar mag namens verzekeraars accepteren, polissen administreren en schade afwikkelen. Doordat zo'n partij klein en wendbaar is, komen producten van de grond die een grote organisatie niet zou bouwen.</dd>
+
+        <dt>Is een nicheverzekering altijd duurder?</dt>
+        <dd>Nee. Een zwaarder risico leidt vaak tot een hogere premie, maar een specialist die het segment kent rekent regelmatig scherper dan een reguliere verzekeraar die accepteert tegen een stevig tarief met beperkte voorwaarden. Vergelijk daarom altijd premie én dekking.</dd>
+
+        <dt>Hoe vraag je een nicheverzekering aan?</dt>
+        <dd>Vrijwel altijd via een assurantietussenpersoon of financieel adviseur. Het dossier moet worden opgebouwd en toegelicht, en dat bepaalt grotendeels de uitkomst. Bij de Vereende loopt de aanvraag uitsluitend via een adviseur.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <!-- ================= WAT ================= -->
-<section id="wat">
+<section id="wat" aria-labelledby="h-wat">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">01 — Definitie</span>
-      <h2>Een nicheverzekering is geen aparte polis. Het is een andere manier van accepteren.</h2>
+      <h2 id="h-wat">Een nicheverzekering is geen aparte polis. Het is een andere manier van accepteren.</h2>
       <p class="lede">Reguliere verzekeraars werken met modellen: een risicoprofiel, een tarief, een geautomatiseerde beoordeling. Dat werkt uitstekend zolang jouw situatie binnen het profiel past. Valt hij erbuiten, dan volgt geen offerte maar een afwijzing — niet omdat het risico onaanvaardbaar is, maar omdat het niet gemodelleerd kan worden.</p>
     </div>
     <div class="grid g3">
@@ -321,7 +424,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
       <div class="cell">
         <span class="tag">Kenmerk 03</span>
         <h3>Doorgaans hogere premie — soms juist lager</h3>
-        <p>Bijzondere risico's zijn meestal ook zwaardere risico's, dus is een hogere premie het logische gevolg en geen straf. Maar niet altijd. Reguliere verzekeraars wijzen liever niet hardop af en accepteren dan wél, tegen een stevig tarief én met beperktere voorwaarden: lagere limieten, meer uitsluitingen, een hoger eigen risico. Een gespecialiseerde partij die het risico echt beoordeelt, komt in zo'n geval soms lager uit — en met een ruimere dekking. Leg daarom altijd premie én voorwaarden naast elkaar; alleen de prijs vergelijken zegt hier weinig.</p>
+        <p>Bijzondere risico's zijn vaak ook zwaardere risico's, dus een hogere premie is het logische gevolg en geen straf. Maar dat is lang niet altijd zo. Reguliere verzekeraars wijzen liever niet hardop af en accepteren dan wél, tegen een stevig tarief en met beperktere voorwaarden: lagere limieten, meer uitsluitingen, een hoger eigen risico. Een specialist die het risico écht beoordeelt in plaats van het weg te modelleren, komt regelmatig lager uit — en met een ruimere dekking. Leg daarom altijd premie én voorwaarden naast elkaar; alleen op prijs kijken doet dit segment tekort.</p>
       </div>
       <div class="cell">
         <span class="tag">Kenmerk 04</span>
@@ -330,8 +433,8 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
       </div>
       <div class="cell">
         <span class="tag">Kenmerk 05</span>
-        <h3>Vangnet, geen alternatief</h3>
-        <p>Een nichepartij is bedoeld voor wat elders niet terechtkan. Hele sectoren horen niet structureel afhankelijk te zijn van één vangnet — dat is een signaal dat de markt iets laat liggen.</p>
+        <h3>Extra capaciteit voor de markt</h3>
+        <p>Waar een nichepartij ja zegt, ontstaat ruimte die er anders niet was. Elke specialist die een segment durft te bedienen, vergroot de keuze voor adviseurs en houdt risico's verzekerbaar die anders bij niemand terecht kunnen.</p>
       </div>
       <div class="cell">
         <span class="tag">Kenmerk 06</span>
@@ -375,11 +478,45 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   </div>
 </section>
 
+<!-- ================= MARKTBELANG ================= -->
+<section id="marktbelang" aria-labelledby="h-markt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">03 — Marktbelang</span>
+      <h2 id="h-markt">Zonder nichespelers zou de Nederlandse markt een stuk smaller zijn</h2>
+      <p class="lede">De Nederlandse verzekeringsmarkt is geconcentreerd: een beperkt aantal groepen bepaalt voor een groot deel het aanbod, de prijs en het acceptatiebeleid. In zo'n markt zijn gespecialiseerde verzekeraars en volmachten geen curiositeit aan de rand. Ze zijn precies de partijen die de markt open, scherp en toegankelijk houden.</p>
+    </div>
+    <div class="grid g4">
+      <div class="cell">
+        <span class="tag">Waarde 01</span>
+        <h3>Toegang voor wie nergens terechtkan</h3>
+        <p>Een taxiondernemer, een verloskundige, een zzp'er in de bouw, iemand met een schadeverleden: verzekerbaarheid bepaalt of je je vak kunt uitoefenen en of je een hypotheek krijgt. Nichepartijen zorgen dat die deur open blijft. Dat is niet alleen commercieel, het is maatschappelijk.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Waarde 02</span>
+        <h3>Nieuwe capaciteit naar Nederland</h3>
+        <p>Een volmacht kan risicodragers aantrekken die hier zelf geen kantoor openen, waaronder gespecialiseerde en buitenlandse verzekeraars. Zo komt er capaciteit bij in segmenten waar die schaars is — zonder dat de klant met een buitenlands loket te maken krijgt, want acceptatie, administratie en schade blijven in Nederland.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Waarde 03</span>
+        <h3>Producten die er nog niet waren</h3>
+        <p>Een uitkering bij verlies van een lichaamsfunctie voor wie een volledige AOV niet kan betalen. Een garantstelling waarmee je zonder financieringsvoorbehoud kunt bieden. Een collectieve overlijdensrisicoverzekering. Kleine, wendbare partijen bouwen dit soort oplossingen jaren voordat de grote markt volgt.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Waarde 04</span>
+        <h3>Gezonde druk op de gevestigde orde</h3>
+        <p>Scherpe premies en heldere voorwaarden in een niche dwingen anderen om mee te bewegen. Voor de adviseur betekent meer aanbieders simpelweg meer keuze, en meer keuze is het beste instrument dat een klant heeft.</p>
+      </div>
+    </div>
+    <p class="meta" style="margin-top:22px">Nichespelers vervangen de grote verzekeraars niet en dat is ook niet de bedoeling. Ze vullen aan waar het aanbod dun is — en juist die aanvulling maakt het verschil tussen wel en niet verzekerd zijn.</p>
+  </div>
+</section>
+
 <!-- ================= ROUTER ================= -->
 <section id="router">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">03 — Hulpmiddel</span>
+      <span class="eyebrow">04 — Hulpmiddel</span>
       <h2>Risico-router</h2>
       <p class="lede">Twee vragen, één richting. De uitkomst is een startpunt voor je gesprek met een adviseur — geen acceptatiebesluit en geen offerte.</p>
     </div>
@@ -400,9 +537,9 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
 <section class="alt" id="routes">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">04 — De twee routes</span>
+      <span class="eyebrow">05 — De twee routes</span>
       <h2>Nicheverzekeraar of nichevolmacht</h2>
-      <p class="lede">Het verschil zit in de rol. Een verzekeraar draagt het risico zelf. Een gevolmachtigd agent draagt het risico niet, maar handelt namens verzekeraars — en kan daardoor sneller een eigen product neerzetten.</p>
+      <p class="lede">Het verschil zit in de rol. Een verzekeraar draagt het risico zelf. Een gevolmachtigd agent draagt het risico niet, maar handelt namens verzekeraars — en kan daardoor sneller en dichter op de klant een eigen product neerzetten. Twee sterke, elkaar aanvullende manieren om een risico onder te brengen.</p>
     </div>
 
     <div class="routes">
@@ -410,7 +547,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
         <span class="label a">Nicheverzekeraar</span>
         <h3>de Vereende</h3>
         <div class="sub">Vangnetverzekeraar · schade · via de adviseur</div>
-        <p>De Vereende verzekert bijzondere en doorgaans hogere risico's die bij reguliere verzekeraars niet terechtkunnen. De organisatie heette tot 2016 Rialto Verzekeringen en daarvoor Terminus. Kernidee: individuele gevallen die nergens verzekerd kunnen worden, kunnen dat meestal wél hier.</p>
+        <p>De Vereende verzekert bijzondere en doorgaans hogere risico's die bij reguliere verzekeraars niet terechtkunnen. De organisatie heette tot 2016 Rialto Verzekeringen en daarvoor Terminus. Kernidee: individuele gevallen die nergens verzekerd kunnen worden, kunnen dat meestal wél hier. Ambachtelijk acceptatiewerk, precies daar waar de markt geen model heeft.</p>
         <ul>
           <li>Motorrijtuigen en bijzondere voertuigen: quad op landbouwkenteken, brommobiel, golfkar, zware camper, taxi en koeriersdiensten</li>
           <li>Particuliere polissen na een afwijzing of royement: auto, inboedel, woonhuis, aansprakelijkheid</li>
@@ -430,11 +567,12 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
         <span class="label b">Nichevolmacht · volmacht boutique</span>
         <h3>Hera Life</h3>
         <div class="sub">Gevolmachtigd agent · leven, inkomen, schade &amp; garanties</div>
-        <p>Hera Life uit Den Haag ontwikkelt financiële producten voor particulieren, ondernemers en bedrijven en treedt daarbij op als gevolmachtigd agent voor diverse verzekeraars. De distributie loopt via assurantietussenpersonen en financieel adviseurs; daarnaast is er een eigen advieskantoor, het Hera Advies Centrum. De schaal is klein en de productlijnen zijn specialistisch — vandaar de term volmacht boutique.</p>
+        <p>Hera Life uit Den Haag ontwikkelt financiële producten voor particulieren, ondernemers en bedrijven en treedt daarbij op als gevolmachtigd agent voor diverse verzekeraars. Waar anderen een segment te klein of te ingewikkeld vinden, bouwt Hera er een product voor: van een dekking bij functieverlies voor de zzp'er tot een garantstelling waarmee je met vertrouwen een bod uitbrengt. Klein van schaal, breed van palet, snel in acceptatie — vandaar de term volmacht boutique. De distributie loopt via assurantietussenpersonen en financieel adviseurs; daarnaast is er een eigen advieskantoor, het Hera Advies Centrum.</p>
         <ul>
           <li>Overlijdensrisicoverzekering, inclusief collectieve varianten binnen de volmacht</li>
           <li>Inkomens- en functieverliesdekkingen voor zzp'ers, werknemers en DGA's, waaronder Hera Zelfverzekerd en WIA-woonlastenoplossingen</li>
-          <li>Motorrijtuigen via schadevolmachten van buitenlandse verzekeraars</li>
+          <li>Motorrijtuigen in lastige segmenten: auto, taxi en zakelijk personenvervoer, via schadevolmachten</li>
+          <li>Bieden met Zekerheid: een garantstelling waarmee zonder financieringsvoorbehoud kan worden geboden</li>
           <li>Bankgaranties bij de aankoop van een woning</li>
           <li>Volmachten van onder meer Cardif-Assurances Risques Divers, Squarelife, Euroins, Maas Lloyd, Slavia pojišťovna en Monarch Assurance</li>
         </ul>
@@ -466,11 +604,72 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   </div>
 </section>
 
+<!-- ================= HERA PRODUCTEN ================= -->
+<section id="hera-producten" aria-labelledby="h-heraproducten">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">06 — Productpalet</span>
+      <h2 id="h-heraproducten">Wat een volmacht boutique in de praktijk bouwt</h2>
+      <p class="lede">Het productpalet van Hera Life laat zien wat een gevolmachtigd agent kan wat een grote organisatie zelden lukt: in korte tijd een compleet aanbod neerzetten over leven, inkomen, motorrijtuigen en garanties, telkens gericht op een groep die elders moeilijk terechtkan. Van elk product bestaat een verzekeringskaart — het gestandaardiseerde informatiedocument dat in twee pagina's laat zien wat wel en niet gedekt is.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag">Leven</span>
+        <h3>Overlijdensrisicoverzekering</h3>
+        <p>Tijdelijke dekking met zelfgekozen verzekerd bedrag en looptijd, gelijkblijvend of dalend. Af te sluiten van 18 tot en met 65 jaar, met een eindleeftijd tot 75 jaar. Verzekerd bedrag van <strong>€ 50.000,00</strong> tot <strong>€ 2.500.000,00</strong>, looptijd 5 tot 30 jaar. Boven <strong>€ 750.000,00</strong> geldt onder de 51 jaar een medische keuring; daarboven liggen de keuringsgrenzen lager.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Leven · collectief</span>
+        <h3>Collectieve overlijdensrisico</h3>
+        <p>Binnen de levenvolmacht is ook een collectieve variant ontwikkeld, waarbij verzekerden onderling dekking bieden. Precies het type propositie dat een verzekeraar zelden zelf opzet voor een klein segment, maar dat binnen een volmacht wel van de grond komt.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Inkomen</span>
+        <h3>Hera Zelfverzekerd</h3>
+        <p>Een particuliere <em>schade</em>verzekering die eenmalig en belastingvrij uitkeert bij langdurig verlies van een lichaamsfunctie: zien, horen, spreken, mobiliteit of het gebruik van armen en handen, naar verwachting langer dan twaalf maanden. Zelf te kiezen tussen <strong>€ 35.000,00</strong> en <strong>€ 200.000,00</strong>. Bedoeld als vangnet wanneer een volledige AOV te duur is; beschikbaar voor zzp'ers, werknemers en DGA's.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Inkomen</span>
+        <h3>WIA Woonlasten</h3>
+        <p>Dekking die zich richt op de woonlasten wanneer het inkomen na langdurige arbeidsongeschiktheid terugvalt. Een gerichte aanvulling naast de wettelijke regelingen, in plaats van een volledige inkomensverzekering.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Motorrijtuigen</span>
+        <h3>Hera Autoverzekering</h3>
+        <p>Particuliere en zakelijke autoverzekering, ondergebracht via schadevolmachten van achterliggende verzekeraars. Juist in dit segment is een eigen acceptatiekader het verschil tussen wel of niet verzekerd raken.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Motorrijtuigen · niche</span>
+        <h3>Hera Taxiverzekering</h3>
+        <p>Taxi is het schoolvoorbeeld van een branche die reguliere verzekeraars mijden: veel kilometers, veel schades, krappe marges. Een gespecialiseerde volmacht kan dit segment wel bedienen omdat acceptatie en schadeafhandeling in één hand liggen.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Motorrijtuigen · niche</span>
+        <h3>TIS Personenvervoerverzekering</h3>
+        <p>Zakelijk personenvervoer met een eigen voorwaardenset. Denk aan doelgroepenvervoer en besloten busvervoer: kleine aantallen, specifieke risico's en een acceptatie die niet in een standaardmodel past.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Garantie</span>
+        <h3>Bankgarantie</h3>
+        <p>Garantstelling richting de notaris in plaats van een waarborgsom van tien procent. Tot <strong>€ 125.000,00</strong> op een bestaande woning voor eigen bewoning kan de aanvraag automatisch worden geaccepteerd; de garantie loopt maximaal één jaar. Zie <a href="#bankgarantie">het blok hieronder</a> voor de werking en de tarieven.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Garantie · nieuw</span>
+        <h3>Bieden met Zekerheid</h3>
+        <p>Een garantstelling die je al bij het uitbrengen van een bod inzet, zodat je zonder financieringsvoorbehoud kunt bieden. Er geldt geen beperking op het biedingsbedrag, de maximale dekking is <strong>€ 75.000,00</strong> en de kosten zijn alleen verschuldigd bij een succesvolle aankoop. Er is een variant met aankoopkostendekking. Waardebepaling kan via een taxatierapport of waardeverklaring van een NWWI-gecertificeerd taxateur, of via Walter Living of Calcasa. Adviseurs werken met een eigen Garantietool.</p>
+      </div>
+    </div>
+
+    <p class="meta" style="margin-top:22px"><b>Gecontroleerd op 23 juli 2026</b> — bedragen, leeftijden en grenzen komen van heralife.nl en de bijbehorende verzekeringskaarten. Dit is een beschrijving op hoofdlijnen, geen dekkingsoverzicht: de verzekeringskaart en de polisvoorwaarden van de aanbieder zijn leidend, en voorwaarden kunnen zonder aankondiging wijzigen.</p>
+  </div>
+</section>
+
 <!-- ================= VOLMACHT ================= -->
 <section id="volmacht">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">05 — Uitleg</span>
+      <span class="eyebrow">07 — Uitleg</span>
       <h2>Wat een gevolmachtigd agent precies doet</h2>
       <p class="lede">Volmacht betekent dat een verzekeraar de bevoegdheid overdraagt om namens hem te handelen. In de praktijk neemt de gevolmachtigde vrijwel de hele polisketen over — alleen het risico blijft bij de verzekeraar.</p>
     </div>
@@ -481,7 +680,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
       <div class="node"><span class="n">Schakel 4</span><strong>Verantwoording</strong><p>Terugkoppeling aan de verzekeraar, audits en toetsing op naleving. Een volmacht is een doorlopend gecontroleerde bevoegdheid, geen blanco cheque.</p></div>
     </div>
     <div style="margin-top:36px;max-width:70ch">
-      <p><strong>Waarom dit voor niche uitmaakt.</strong> Een verzekeraar die zelf geen afdeling wil opzetten voor een klein, specialistisch segment, kan het mandaat geven aan een partij die dat wél doet. Zo ontstaan producten die anders nooit gebouwd zouden worden: een collectieve overlijdensrisicoverzekering, een uitkering bij verlies van een lichaamsfunctie voor de zzp'er in de bouw, een bankgarantie met een acceptatie op dezelfde dag.</p>
+      <p><strong>Waarom dit voor niche uitmaakt.</strong> Een verzekeraar die zelf geen afdeling wil opzetten voor een klein, specialistisch segment, kan het mandaat geven aan een partij die dat wél doet. Zo ontstaan producten die anders nooit gebouwd zouden worden: een collectieve overlijdensrisicoverzekering, een uitkering bij verlies van een lichaamsfunctie voor de zzp'er in de bouw, een garantstelling met acceptatie op dezelfde dag. Het mandaat is daarmee niet alleen een efficiëntietruc, maar de motor achter vrijwel alle vernieuwing aan de randen van de markt.</p>
       <p><strong>Waar je op let bij een volmachtpartij.</strong> Welke verzekeraars staan erachter en onder welk toezicht vallen zij? Hoe ver reikt het mandaat — mag de gevolmachtigde ook schade afwikkelen? Wat gebeurt er met je polis als de volmacht eindigt? Deze vragen horen aan de voorkant beantwoord te worden, niet bij de eerste schade.</p>
     </div>
   </div>
@@ -491,7 +690,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
 <section class="alt" id="bankgarantie">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">06 — Aangrenzend product</span>
+      <span class="eyebrow">08 — Aangrenzend product</span>
       <h2>Bankgarantie: geen verzekering, wel maatwerk</h2>
       <p class="lede">Bij de aankoop van een woning eist de koopovereenkomst vrijwel altijd een waarborgsom van tien procent, of een bankgarantie in plaats daarvan. Wie dat bedrag niet wil vastzetten, koopt in feite een garantstelling. Ook dit werk zit bij nichepartijen, waaronder Hera Life.</p>
     </div>
@@ -512,6 +711,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
         <p>Hera Life kent twee varianten: een nettovariant van <strong>€ 175,00</strong> en een variant van <strong>€ 300,00</strong>. Loopt de garantie langer dan een jaar, dan komt er per extra dag een kleine opslag bij. Tarieven kunnen wijzigen — controleer altijd het actuele tarief bij de aanbieder.</p>
       </div>
     </div>
+    <p class="meta" style="margin-top:22px"><b>Gecontroleerd op 23 juli 2026</b> — bedragen en acceptatiegrenzen in dit blok komen van heralife.nl. Tarieven kunnen zonder aankondiging wijzigen; raadpleeg altijd de aanbieder.</p>
   </div>
 </section>
 
@@ -519,7 +719,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
 <section id="praktijk">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">07 — Uit de praktijk</span>
+      <span class="eyebrow">09 — Uit de praktijk</span>
       <h2>Wat er werkelijk op de acceptatietafel belandt</h2>
       <p class="lede">Geen bedachte voorbeelden. Dit is het soort aanvraag waarvoor het nichesegment bestaat.</p>
     </div>
@@ -541,7 +741,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
 <section class="alt" id="faq">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">08 — Veelgestelde vragen</span>
+      <span class="eyebrow">10 — Veelgestelde vragen</span>
       <h2>Wat mensen echt willen weten</h2>
     </div>
     <div class="faq">
@@ -555,11 +755,11 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
       </details>
       <details>
         <summary>Waarom is de premie zoveel hoger?</summary>
-        <div class="ans"><p>Omdat het risico dat wordt overgenomen groter of onzekerder is, en omdat de acceptatie handwerk is in plaats van geautomatiseerd. Bij een uniek object ontbreekt bovendien de statistiek om scherp te kunnen calculeren; die onzekerheid zit in de premie verwerkt.</p></div>
+        <div class="ans"><p>Als de premie hoger is, komt dat doordat het risico groter of onzekerder is en doordat de acceptatie handwerk is in plaats van geautomatiseerd. Bij een uniek object ontbreekt bovendien de statistiek om scherp te calculeren. Maar hoger is geen automatisme: specialisten kennen hun segment vaak beter dan een generalist en rekenen daardoor regelmatig scherper dan het tarief dat je met beperkte voorwaarden bij een reguliere aanbieder krijgt. Vergelijk dus altijd premie én dekking.</p></div>
       </details>
       <details>
         <summary>Blijf ik voor altijd in het nichesegment zitten?</summary>
-        <div class="ans"><p>Meestal niet. Registraties en schadeverledens hebben een looptijd. Laat je polis periodiek toetsen: na een aantal schadevrije jaren is terugkeer naar de reguliere markt vaak mogelijk, met een lagere premie als gevolg.</p></div>
+        <div class="ans"><p>Dat hoeft niet. Registraties en schadeverledens hebben een looptijd, dus laat je polis periodiek toetsen: na een aantal schadevrije jaren is terugkeer naar de reguliere markt vaak mogelijk. Even goed mogelijk is dat je blijft, simpelweg omdat de specialist jouw situatie beter begrijpt en je daar beter af bent.</p></div>
       </details>
       <details>
         <summary>Kan ik rechtstreeks aanvragen, zonder adviseur?</summary>
@@ -581,17 +781,98 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   </div>
 </section>
 
+<!-- ================= BEGRIPPEN ================= -->
+<section id="begrippen" aria-labelledby="h-begrippen">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">11 — Begrippen</span>
+      <h2 id="h-begrippen">Woordenlijst</h2>
+      <p class="lede">De termen die in dit segment het vaakst voor verwarring zorgen, kort en zonder jargon uitgelegd.</p>
+    </div>
+    <dl class="terms">
+      <div class="term"><dt>Nicheverzekering</dt><dd>Verzekering voor een risico dat buiten het standaard acceptatiekader valt en daarom handmatig wordt beoordeeld in plaats van door een rekenmodel.</dd></div>
+      <div class="term"><dt>Moeilijk verzekerbaar risico</dt><dd>Een risico dat door reguliere verzekeraars wordt geweigerd vanwege het verleden van de aanvrager, de branche, het object of het aansprakelijkheidsprofiel.</dd></div>
+      <div class="term"><dt>Vangnetverzekeraar</dt><dd>Verzekeraar die zich richt op risico's die elders niet terechtkunnen, zodat individuele gevallen toch verzekerd raken. De Vereende vervult deze rol in Nederland.</dd></div>
+      <div class="term"><dt>Gevolmachtigd agent</dt><dd>Partij die van een verzekeraar de bevoegdheid heeft gekregen om namens hem te accepteren, polissen te administreren en vaak ook schade af te wikkelen. Het risico blijft bij de verzekeraar.</dd></div>
+      <div class="term"><dt>Volmacht boutique</dt><dd>Kleine, gespecialiseerde gevolmachtigd agent met een eigen productlijn voor specifieke doelgroepen, in plaats van een breed standaardpakket.</dd></div>
+      <div class="term"><dt>Acceptatie</dt><dd>De beoordeling of en onder welke voorwaarden een risico verzekerd wordt. In het nichesegment gebeurt dit door een acceptant, niet door een geautomatiseerd model.</dd></div>
+      <div class="term"><dt>Royement</dt><dd>Tussentijdse beëindiging van een polis door de verzekeraar, bijvoorbeeld na schade of wanbetaling. Een royement moet je bij een volgende aanvraag melden.</dd></div>
+      <div class="term"><dt>Verzekeringskaart</dt><dd>Gestandaardiseerd informatiedocument dat in twee pagina's samenvat wat een verzekering wel en niet dekt. Officieel heet dit het Ipid.</dd></div>
+      <div class="term"><dt>Bankgarantie</dt><dd>Garantstelling richting de notaris in plaats van een waarborgsom bij een woningaankoop. Geen verzekering: bij uitbetaling moet je het bedrag terugbetalen.</dd></div>
+      <div class="term"><dt>Kifid</dt><dd>Klachteninstituut Financiële Dienstverlening, waar consumenten terechtkunnen met een klacht over een financiële dienstverlener.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= BRONNEN ================= -->
+<section class="alt" id="bronnen" aria-labelledby="h-bronnen">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">12 — Verantwoording</span>
+      <h2 id="h-bronnen">Waar deze informatie vandaan komt</h2>
+      <p class="lede">Feitelijke beweringen op deze pagina zijn terug te voeren op openbare bronnen. Alles is gecontroleerd op <strong>23 juli 2026</strong>. Verzekeringsinformatie veroudert snel: gebruik deze pagina als startpunt, niet als eindpunt.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag">Nicheverzekeraar</span>
+        <h3>de Vereende</h3>
+        <p>Positionering als vangnetverzekeraar, voorbeelden van bijzondere risico's en de uitvoering van Waarborgfonds Motorverkeer en Nederlands Bureau — <a href="https://vereende.nl" target="_blank" rel="noopener">vereende.nl</a>, inclusief het kenniscentrum en de pers- en jaarverslagpagina's.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Nichevolmacht</span>
+        <h3>Hera Life</h3>
+        <p>Rol als gevolmachtigd agent, de lijst van achterliggende verzekeraars, het productpalet, de verzekeringskaarten, bankgarantietarieven en acceptatiegrenzen — <a href="https://heralife.nl/over-hera-life/" target="_blank" rel="noopener">heralife.nl</a> en de bijbehorende pagina's over bankgarantie en veelgestelde vragen.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Vakmedia</span>
+        <h3>Branchejournalistiek</h3>
+        <p>Berichtgeving over verstrekte volmachten en marktontwikkelingen in het nichesegment, onder meer via VVP en InFinance. Uitspraken over afnemende verzekerbaarheid zijn ontleend aan publicaties van brancheorganisaties.</p>
+      </div>
+    </div>
+    <p class="meta" style="margin-top:22px">Fout gevonden of achterhaalde informatie gezien? Meld het via het contactblok hieronder, dan passen we het aan.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" aria-labelledby="h-contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">13 — Contact</span>
+      <h2 id="h-contact">Vragen, correcties of samenwerking</h2>
+      <p class="lede">Deze pagina verkoopt niets en verwerkt geen aanvragen. Voor een persoonlijke situatie schakel je een adviseur in; voor de inhoud van deze pagina kun je hieronder terecht.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag">Redactie</span>
+        <h3>Inhoudelijke reactie</h3>
+        <p>E-mail: <a href="mailto:VUL-IN@VOORBEELD.NL">VUL-IN@VOORBEELD.NL</a><br>Reactietermijn: binnen vijf werkdagen.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Advies nodig</span>
+        <h3>Zoek een adviseur</h3>
+        <p>Controleer of een adviseur een passende vergunning heeft in het <a href="https://www.afm.nl" target="_blank" rel="noopener">AFM-register</a> en of het kantoor is aangesloten bij <a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid</a>.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Formeel</span>
+        <h3>Colofon en privacy</h3>
+        <p>Bedrijfsgegevens en verwerkingsinformatie staan in het <a href="colofon.html">colofon</a> en de <a href="privacy.html">privacyverklaring</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- ================= DISCLAIMER ================= -->
-<section id="voorwaarden">
+<section class="alt" id="voorwaarden" aria-labelledby="h-voorwaarden">
   <div class="wrap">
     <div class="notice">
-      <div class="h">Belangrijk — lees dit voordat je iets aanvraagt</div>
+      <div class="h" id="h-voorwaarden">Belangrijk — lees dit voordat je iets aanvraagt</div>
       <p>Deze site geeft algemene informatie over het nichesegment in de Nederlandse verzekeringsmarkt. Het is <strong>geen financieel advies</strong>, geen aanbod en geen bemiddeling in de zin van de Wet op het financieel toezicht. Er wordt op deze site niet vergeleken op premie of voorwaarden en er worden geen producten aangeboden.</p>
       <p>Genoemde partijen, producten, tarieven, acceptatiegrenzen en volmachten zijn beschrijvend opgenomen op basis van openbare informatie en kunnen zijn gewijzigd. Aan de inhoud kunnen geen rechten worden ontleend. Raadpleeg altijd de actuele productinformatie, de polisvoorwaarden en het informatiedocument van de aanbieder zelf.</p>
       <p>Voor persoonlijk advies of het afsluiten van een verzekering schakel je een financieel adviseur of assurantietussenpersoon in met een passende AFM-vergunning. Vergunningnummers en Kifid-aansluitnummers op deze site horen bij de betreffende aanbieder, niet bij deze site.</p>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -601,8 +882,11 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
         <ul>
           <li><a href="#wat">Wat is een nicheverzekering</a></li>
           <li><a href="#waarom">Redenen voor afwijzing</a></li>
+          <li><a href="#marktbelang">Waarom niche ertoe doet</a></li>
           <li><a href="#router">Risico-router</a></li>
+          <li><a href="#hera-producten">Productpalet volmacht</a></li>
           <li><a href="#praktijk">Praktijkvoorbeelden</a></li>
+          <li><a href="#begrippen">Woordenlijst</a></li>
         </ul>
       </div>
       <div>
@@ -631,10 +915,21 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
           <li><a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid — klachteninstituut</a></li>
         </ul>
       </div>
+      <div>
+        <h4>Deze site</h4>
+        <ul>
+          <li><a href="#bronnen">Bronnen en verantwoording</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="colofon.html">Colofon en disclaimer</a></li>
+          <li><a href="privacy.html">Privacyverklaring</a></li>
+          <li><a href="toegankelijkheid.html">Toegankelijkheid</a></li>
+        </ul>
+      </div>
     </div>
     <div class="fbottom">
       Onafhankelijke kennispagina over nicheverzekeringen · Geen aanbieder, geen bemiddelaar, geen vergelijker<br>
-      Informatie is algemeen van aard en kan verouderen. Controleer altijd de bron van de aanbieder.
+      Informatie is algemeen van aard en kan verouderen. Laatst gecontroleerd op 23 juli 2026.<br>
+      <a href="colofon.html">Colofon</a> · <a href="privacy.html">Privacy</a> · <a href="toegankelijkheid.html">Toegankelijkheid</a> · <a href="#bronnen">Bronnen</a>
     </div>
   </div>
 </footer>
@@ -669,7 +964,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
     vereende: {
       route:"Route — Nicheverzekeraar",
       title:"de Vereende",
-      why:"Dit is een vangnetvraag: het risico bestaat wel, maar past niet in een standaard acceptatiemodel. De Vereende accepteert dit soort dossiers handmatig.",
+      why:"Dit is een vangnetvraag: het risico bestaat wel, maar past niet in een standaard acceptatiemodel. Goed nieuws — daar is de Vereende voor gemaakt. Dit soort dossiers wordt met de hand beoordeeld, door mensen die het segment kennen.",
       prep:[
         "Vraag de afwijzingsgrond schriftelijk op bij de vorige verzekeraar",
         "Zet het schadeverleden van de laatste vijf jaar op een rij, inclusief bedragen",
@@ -682,7 +977,7 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
     hera: {
       route:"Route — Nichevolmacht · volmacht boutique",
       title:"Hera Life",
-      why:"Hier is niet zozeer sprake van een afwijzing, maar van een leemte: het product dat je nodig hebt, bestaat regulier niet of niet in deze vorm. Een gevolmachtigd agent kan zo'n propositie bouwen op de capaciteit van achterliggende verzekeraars.",
+      why:"Hier is geen sprake van een afwijzing, maar van een kans: het product dat je nodig hebt bestaat regulier niet of niet in deze vorm. Precies daarvoor bestaat de volmacht — een gevolmachtigd agent bouwt zo'n propositie op de capaciteit van achterliggende verzekeraars, en doorgaans een stuk sneller dan een grote organisatie dat kan.",
       prep:[
         "Formuleer eerst het doel, niet het product: welk bedrag moet wanneer beschikbaar zijn, en voor wie",
         "Breng je bestaande dekkingen in kaart om dubbele of ontbrekende dekking te zien",
@@ -777,5 +1072,83 @@ footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:u
   start();
 })();
 </script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#website",
+      "url":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/",
+      "name":"Nicheverzekeringen",
+      "inLanguage":"nl-NL",
+      "description":"Kennispagina over nicheverzekeringen, moeilijk verzekerbare risico's, volmacht en bankgaranties in Nederland."
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#webpage",
+      "url":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/",
+      "name":"Nicheverzekeringen: moeilijk verzekerbare risico's, volmacht en maatwerk",
+      "description":"Wat is een nicheverzekering, waarom wijzen reguliere verzekeraars af en waar kun je dan wel terecht?",
+      "isPartOf":{"@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#website"},
+      "primaryImageOfPage":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/assets/og-image.png",
+      "inLanguage":"nl-NL",
+      "datePublished":"2026-07-23",
+      "dateModified":"2026-07-23",
+      "speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr"]}
+    },
+    {
+      "@type":"Article",
+      "@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#article",
+      "headline":"Nicheverzekeringen: als iedereen nee zegt, zegt iemand ja",
+      "description":"Uitleg over nicheverzekeringen in Nederland: afwijzingsgronden, de rol van een nicheverzekeraar en van een gevolmachtigd agent, en hoe je een aanvraag opbouwt.",
+      "articleSection":["Definitie","Afwijzingsgronden","Marktbelang","Volmacht","Bankgarantie","Begrippen"],
+      "inLanguage":"nl-NL",
+      "datePublished":"2026-07-23",
+      "dateModified":"2026-07-23",
+      "isPartOf":{"@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#webpage"},
+      "about":[
+        {"@type":"Thing","name":"Nicheverzekering"},
+        {"@type":"Thing","name":"Moeilijk verzekerbaar risico"},
+        {"@type":"Thing","name":"Gevolmachtigd agent"}
+      ],
+      "mentions":[
+        {"@type":"Organization","name":"de Vereende","url":"https://vereende.nl"},
+        {"@type":"Organization","name":"Hera Life","url":"https://heralife.nl"}
+      ]
+    },
+    {
+      "@type":"DefinedTermSet",
+      "@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#begrippen",
+      "name":"Begrippenlijst nicheverzekeringen",
+      "inLanguage":"nl-NL",
+      "hasDefinedTerm":[
+        {"@type":"DefinedTerm","name":"Nicheverzekering","description":"Verzekering voor een risico dat buiten het standaard acceptatiekader valt en daarom handmatig wordt beoordeeld in plaats van door een rekenmodel."},
+        {"@type":"DefinedTerm","name":"Vangnetverzekeraar","description":"Verzekeraar die zich richt op risico's die elders niet terechtkunnen, zodat individuele gevallen toch verzekerd raken."},
+        {"@type":"DefinedTerm","name":"Gevolmachtigd agent","description":"Partij die van een verzekeraar de bevoegdheid heeft gekregen om namens hem te accepteren, polissen te administreren en vaak ook schade af te wikkelen. Het risico blijft bij de verzekeraar."},
+        {"@type":"DefinedTerm","name":"Volmacht boutique","description":"Kleine, gespecialiseerde gevolmachtigd agent met een eigen productlijn voor specifieke doelgroepen."},
+        {"@type":"DefinedTerm","name":"Royement","description":"Tussentijdse beeindiging van een polis door de verzekeraar, bijvoorbeeld na schade of wanbetaling."},
+        {"@type":"DefinedTerm","name":"Verzekeringskaart","description":"Gestandaardiseerd informatiedocument dat in twee pagina's samenvat wat een verzekering wel en niet dekt."},
+        {"@type":"DefinedTerm","name":"Bankgarantie","description":"Garantstelling richting de notaris in plaats van een waarborgsom bij een woningaankoop. Geen verzekering: bij uitbetaling moet het bedrag worden terugbetaald."}
+      ]
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/#faq",
+      "mainEntity":[
+        {"@type":"Question","name":"Ik ben afgewezen. Ben ik nu overal afgewezen?","acceptedAnswer":{"@type":"Answer","text":"Nee. Acceptatiebeleid verschilt sterk per verzekeraar en per moment. Een afwijzing zegt iets over het beleid van die ene partij, niet over jouw verzekerbaarheid in het algemeen. Vraag altijd naar de afwijzingsgrond: die bepaalt welke route kansrijk is."}},
+        {"@type":"Question","name":"Moet ik een afwijzing melden bij een volgende aanvraag?","acceptedAnswer":{"@type":"Answer","text":"Ja. Op vrijwel elk aanvraagformulier staat een slotvraag over eerdere weigeringen, opzeggingen en registraties. Verzwijgen is de snelste manier om een dekking later kwijt te raken."}},
+        {"@type":"Question","name":"Waarom is de premie zoveel hoger?","acceptedAnswer":{"@type":"Answer","text":"Omdat het risico groter of onzekerder is en de acceptatie handwerk is in plaats van geautomatiseerd. Bij een uniek object ontbreekt de statistiek om scherp te calculeren; die onzekerheid zit in de premie verwerkt. Soms is een gespecialiseerde partij juist goedkoper dan een regulier tarief met beperkte voorwaarden."}},
+        {"@type":"Question","name":"Blijf ik voor altijd in het nichesegment zitten?","acceptedAnswer":{"@type":"Answer","text":"Meestal niet. Registraties en schadeverledens hebben een looptijd. Laat je polis periodiek toetsen: na een aantal schadevrije jaren is terugkeer naar de reguliere markt vaak mogelijk."}},
+        {"@type":"Question","name":"Wat is het verschil tussen een volmacht en een tussenpersoon?","acceptedAnswer":{"@type":"Answer","text":"Een tussenpersoon adviseert en bemiddelt, maar beslist niet over acceptatie. Een gevolmachtigd agent beslist wel, namens de verzekeraar en binnen de grenzen van de volmacht, en regelt daarnaast administratie en vaak ook schade."}},
+        {"@type":"Question","name":"Wat is een nicheverzekering?","acceptedAnswer":{"@type":"Answer","text":"Een nicheverzekering is een verzekering voor een risico dat buiten het standaard acceptatiekader van reguliere verzekeraars valt. Het is geen apart type polis, maar een andere manier van accepteren: een acceptant beoordeelt het dossier met de hand in plaats van via een rekenmodel."}},
+        {"@type":"Question","name":"Waar kun je terecht als je verzekering is afgewezen?","acceptedAnswer":{"@type":"Answer","text":"Bij een nicheverzekeraar of een nichevolmacht. In Nederland is de Vereende de bekendste nicheverzekeraar voor bijzondere risico's. Hera Life is een voorbeeld van een nichevolmacht of volmacht boutique: een gevolmachtigd agent die namens verzekeraars eigen maatwerkproducten ontwikkelt. Aanvragen lopen vrijwel altijd via een adviseur."}},
+        {"@type":"Question","name":"Is een bankgarantie een verzekering?","acceptedAnswer":{"@type":"Answer","text":"Nee, het is een garantstelling. Wordt er uitbetaald aan de notaris, dan moet je dat bedrag terugbetalen aan de garantsteller. Een verzekering keert uit zonder terugbetalingsverplichting."}}
+      ]
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
