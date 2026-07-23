@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://GEBRUIKERSNAAM.github.io/nicheverzekeringen/sitemap.xml

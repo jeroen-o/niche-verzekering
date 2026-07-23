@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicheverzekeringen — moeilijk verzekerbare en maatwerkrisico's</title>
+<meta name="description" content="Alles over nicheverzekeringen in Nederland: waarom reguliere verzekeraars nee zeggen, wat een nicheverzekeraar doet, hoe volmacht werkt, en waar je terecht kunt.">
+<style>
+/* ============================================================
+   HUISSTIJL — Wildschönau Tourismus (re-design 2023)
+   Type   : TT Norms Pro (Sans + Serif), TypeType — commercieel
+   Kleur  : afgedonkerde blauw- en oranjetinten
+   Vorm   : licht afgeronde lijnen als secundair stijlelement
+   ------------------------------------------------------------
+   Heb je de gelicentieerde webfont? Plak dan hieronder je
+   @font-face-regels; de stacks pakken ze automatisch op.
+   Zonder licentie valt de site terug op Avenir Next / Segoe UI
+   (sans) en Georgia (serif).
+
+   @font-face{font-family:"TT Norms Pro";src:url("ttnormspro-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+   @font-face{font-family:"TT Norms Pro";src:url("ttnormspro-medium.woff2")  format("woff2");font-weight:500;font-display:swap}
+   @font-face{font-family:"TT Norms Pro";src:url("ttnormspro-bold.woff2")    format("woff2");font-weight:700;font-display:swap}
+   @font-face{font-family:"TT Norms Pro Serif";src:url("ttnormsproserif-regular.woff2") format("woff2");font-weight:400;font-display:swap}
+   ============================================================ */
+:root{
+  /* --- kleur --- */
+  --ink:#152C41;              /* diep blauw, tekst en donkere vlakken */
+  --ink-70:rgba(21,44,65,.72);
+  --ink-45:rgba(21,44,65,.50);
+  --paper:#F4F2ED;            /* warm neutraal papier */
+  --paper-2:#FFFFFF;
+  --tint:#E7EEF3;             /* koele blauwe tint voor afwisselende secties */
+  --teal:#1A4E7A;             /* huisblauw, primaire actie */
+  --teal-dark:#123A5C;
+  --teal-soft:#DCE8F1;
+  --stamp:#D96A20;            /* huisoranje, accent */
+  --tab:#E9A23B;              /* licht oranje, secundair accent */
+  --line:rgba(21,44,65,.14);
+  --line-strong:rgba(21,44,65,.24);
+
+  /* --- type --- */
+  --sans:"TT Norms Pro","TT Norms","Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --serif:"TT Norms Pro Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --display:var(--sans);
+  --body:var(--sans);
+  --mono:var(--sans);
+
+  /* --- vorm --- */
+  --r-sm:8px;
+  --r:16px;
+  --r-lg:26px;
+  --r-pill:999px;
+  --wrap:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:3px;border-radius:4px}
+
+/* ---------- utility type ---------- */
+.eyebrow{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-45);display:block;margin-bottom:18px;
+}
+.eyebrow b{color:var(--stamp);font-weight:700}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(38px,6.2vw,72px);line-height:1.03}
+h2{font-size:clamp(28px,3.6vw,42px);line-height:1.12}
+h3{font-size:20px;line-height:1.25;font-weight:600}
+p{margin:0 0 16px}
+.lede{font-family:var(--serif);font-size:clamp(18px,2vw,21px);line-height:1.55;color:var(--ink-70);max-width:62ch}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;align-items:center;gap:28px;height:62px}
+.brand{font-size:14px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--stamp)}
+.navlinks{margin-left:auto;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{
+  font-size:13.5px;font-weight:500;color:var(--ink-70);text-decoration:none;white-space:nowrap;
+  padding:7px 13px;border-radius:var(--r-pill);transition:background .16s,color .16s;
+}
+.navlinks a:hover{color:var(--teal);background:var(--teal-soft)}
+
+/* ---------- hero ---------- */
+header.hero{padding:clamp(52px,8vw,96px) 0 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:48px;align-items:start}
+.hero h1 em{font-style:normal;color:var(--stamp)}
+.hero .lede{margin-top:26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-block;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.01em;
+  padding:14px 26px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;
+  cursor:pointer;border-radius:var(--r-pill);transition:background .18s,color .18s,border-color .18s;
+}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.primary:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+
+/* stamp */
+.stamp{
+  border:3px solid var(--stamp);color:var(--stamp);padding:20px 22px;border-radius:var(--r-lg);
+  transform:rotate(-5deg);text-align:center;max-width:290px;margin-left:auto;background:rgba(217,106,32,.05);
+}
+.stamp .big{font-size:clamp(21px,2.4vw,28px);font-weight:700;letter-spacing:.02em;line-height:1.08}
+.stamp .small{font-size:11.5px;font-weight:600;letter-spacing:.18em;margin-top:10px;border-top:1.5px solid rgba(217,106,32,.45);padding-top:9px}
+
+/* ticker */
+.ticker{
+  margin-top:clamp(44px,7vw,80px);overflow:hidden;padding:13px 0;background:var(--paper-2);
+  border-radius:var(--r-pill);box-shadow:0 1px 0 var(--line) inset,0 0 0 1px var(--line);
+}
+.ticker-track{display:flex;width:max-content;animation:slide 46s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{
+  font-size:13px;font-weight:500;letter-spacing:.04em;
+  padding:0 20px;color:var(--ink-70);white-space:nowrap;
+}
+.ticker span::before{content:"●";color:var(--tab);margin-right:12px;font-size:8px;vertical-align:middle}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none;flex-wrap:wrap;width:auto}}
+
+/* ---------- sections ---------- */
+section{padding:clamp(56px,8vw,100px) 0}
+section.alt{background:var(--tint)}
+.sec-head{max-width:66ch;margin-bottom:44px}
+.sec-head h2{margin-bottom:18px}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cell{background:var(--paper-2);padding:28px 26px;border-radius:var(--r);border:1px solid var(--line)}
+.cell .tag{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--stamp);display:block;margin-bottom:12px}
+.cell h3{margin-bottom:10px}
+.cell p{font-size:15.5px;color:var(--ink-70);margin-bottom:0}
+
+/* ---------- router ---------- */
+.router{border:1px solid var(--line-strong);background:var(--paper-2);max-width:920px;border-radius:var(--r-lg);overflow:hidden}
+.router-bar{
+  display:flex;align-items:center;gap:14px;padding:15px 26px;background:var(--teal);color:#fff;
+  font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+}
+.router-bar .dot{width:9px;height:9px;background:var(--tab);border-radius:50%;flex:none}
+.router-bar .step{margin-left:auto;color:rgba(255,255,255,.72);letter-spacing:.08em}
+.router-body{padding:32px}
+.q{font-family:var(--display);font-weight:700;letter-spacing:-.015em;font-size:clamp(21px,2.6vw,28px);margin:0 0 22px}
+.opts{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.opt{
+  text-align:left;font-family:var(--sans);font-size:15.5px;background:var(--paper);border:1.5px solid var(--line);
+  padding:17px 20px;cursor:pointer;display:flex;gap:12px;align-items:baseline;border-radius:var(--r-sm);
+  transition:border-color .15s,background .15s;color:var(--ink);
+}
+.opt:hover{border-color:var(--teal);background:var(--teal-soft)}
+.opt .k{font-weight:700;font-size:13px;color:var(--stamp);flex:none}
+.result{border-top:1px solid var(--line);padding:32px;background:var(--tint)}
+.result .route{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-45);margin-bottom:8px}
+.result h3{font-size:clamp(24px,3vw,32px);font-weight:700;margin-bottom:14px;color:var(--teal)}
+.result ul{margin:0 0 18px;padding-left:20px;color:var(--ink-70);font-size:15.5px}
+.result li{margin-bottom:7px}
+.result .why{border-left:4px solid var(--tab);border-radius:0 var(--r-sm) var(--r-sm) 0;background:rgba(255,255,255,.6);padding:14px 18px;font-family:var(--serif);font-size:16px;color:var(--ink-70);margin-bottom:22px}
+.result .prep-label{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-45);margin-bottom:10px}
+
+/* ---------- routes ---------- */
+.routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.route-card{background:var(--paper-2);border:1px solid var(--line);padding:34px 32px;display:flex;flex-direction:column;border-radius:var(--r-lg)}
+.route-card .label{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;align-self:flex-start;margin-bottom:20px;border-radius:var(--r-pill)}
+.label.a{background:var(--teal);color:#fff}
+.label.b{background:var(--tab);color:#3D2708}
+.route-card h3{font-size:clamp(26px,3.2vw,34px);font-weight:700;margin-bottom:6px}
+.route-card .sub{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-45);margin-bottom:20px}
+.route-card ul{padding-left:18px;margin:0 0 22px;color:var(--ink-70);font-size:15.5px}
+.route-card li{margin-bottom:8px}
+.route-card .foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.meta{font-size:13px;line-height:1.95;color:var(--ink-45)}
+.meta b{color:var(--ink-70);font-weight:600}
+
+/* ---------- table ---------- */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper-2);border-radius:var(--r);}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-45);font-weight:700;background:var(--tint)}
+.tbl td:first-child{font-weight:600;width:26%}
+.tbl tr:last-child td{border-bottom:none}
+
+/* ---------- chain ---------- */
+.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:8px}
+.chain .node{border:1px solid var(--line);padding:24px 22px;background:var(--paper-2);border-radius:var(--r)}
+.chain .n{font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--tab);display:block;margin-bottom:10px;text-transform:uppercase}
+.chain .node strong{display:block;font-size:19px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.chain .node p{font-size:14.5px;color:var(--ink-70);margin:0}
+
+/* ---------- faq ---------- */
+.faq{max-width:88ch}
+details{border:1px solid var(--line);background:var(--paper-2);border-radius:var(--r);margin-bottom:12px}
+details[open]{border-color:var(--line-strong)}
+details summary{
+  cursor:pointer;list-style:none;padding:20px 56px 20px 24px;position:relative;
+  font-size:18px;font-weight:600;letter-spacing:-.01em;border-radius:var(--r);
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);
+  color:#fff;background:var(--stamp);width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;font-weight:400;
+}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 24px 24px;color:var(--ink-70);font-size:15.5px}
+details .ans p:last-child{margin-bottom:0}
+
+/* ---------- notice ---------- */
+.notice{border:2px solid var(--stamp);background:var(--paper-2);padding:30px 32px;max-width:900px;border-radius:var(--r-lg)}
+.notice .h{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--stamp);margin-bottom:14px}
+.notice p{font-size:15px;color:var(--ink-70)}
+.notice p:last-child{margin-bottom:0}
+
+/* ---------- footer ---------- */
+footer{padding:60px 0 70px;background:var(--ink);color:rgba(255,255,255,.74)}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32)}
+footer a:hover{border-bottom-color:var(--tab);color:var(--tab)}
+footer h4{font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--tab);margin:0 0 14px}
+.fgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.fgrid ul{list-style:none;margin:0;padding:0;font-size:14.5px;line-height:2.05}
+.fbottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);font-size:13px;color:rgba(255,255,255,.55);line-height:1.85}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .stamp{margin-left:0;transform:rotate(-3deg)}
+  .g3,.g4,.routes,.chain,.fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .g2,.g3,.g4,.routes,.chain,.opts,.fgrid{grid-template-columns:1fr}
+  .navlinks{gap:2px}
+  .router-body,.result{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Niche<span>·</span>verzekeringen</a>
+    <div class="navlinks">
+      <a href="#wat">Wat is niche</a>
+      <a href="#waarom">Waarom afgewezen</a>
+      <a href="#router">Risico-router</a>
+      <a href="#routes">Waar terecht</a>
+      <a href="#volmacht">Volmacht</a>
+      <a href="#bankgarantie">Bankgarantie</a>
+      <a href="#faq">Vragen</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Kennisbank nicheverzekeringen &nbsp;/&nbsp; <b>Nederland</b> &nbsp;/&nbsp; voor adviseurs en ondernemers</span>
+        <h1>Elke verzekeraar zegt nee.<br><em>Iemand moet ja zeggen.</em></h1>
+        <p class="lede">Een stoomtreintje, een leegstaande watertoren, een veetransporteur, een zzp'er die met zijn handen werkt, een koper die vandaag een bankgarantie nodig heeft. Risico's die buiten het standaard acceptatiekader vallen, verdwijnen niet — ze verhuizen. Deze site legt uit waarheen, en waarom.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#router">Start de risico-router</a>
+          <a class="btn" href="#wat">Lees eerst de basis</a>
+        </div>
+      </div>
+      <div>
+        <div class="stamp">
+          <div class="big">NIET<br>GEACCEPTEERD</div>
+          <div class="small">RISICO VALT BUITEN KADER</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Leegstaande watertoren</span><span>Antieke stoomtrein</span><span>Taxibedrijf</span><span>Veetransport</span><span>Rondreizend circus</span><span>Tank in een optocht</span><span>Quad op landbouwkenteken</span><span>Golfkar</span><span>Bezorgbrommers</span><span>Verloskundige</span><span>Recyclingbedrijf</span><span>Zware camper</span><span>Amfibievoertuig</span><span>Coffeeshop</span>
+        <span>Leegstaande watertoren</span><span>Antieke stoomtrein</span><span>Taxibedrijf</span><span>Veetransport</span><span>Rondreizend circus</span><span>Tank in een optocht</span><span>Quad op landbouwkenteken</span><span>Golfkar</span><span>Bezorgbrommers</span><span>Verloskundige</span><span>Recyclingbedrijf</span><span>Zware camper</span><span>Amfibievoertuig</span><span>Coffeeshop</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= WAT ================= -->
+<section id="wat">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">01 — Definitie</span>
+      <h2>Een nicheverzekering is geen aparte polis. Het is een andere manier van accepteren.</h2>
+      <p class="lede">Reguliere verzekeraars werken met modellen: een risicoprofiel, een tarief, een geautomatiseerde beoordeling. Dat werkt uitstekend zolang jouw situatie binnen het profiel past. Valt hij erbuiten, dan volgt geen offerte maar een afwijzing — niet omdat het risico onaanvaardbaar is, maar omdat het niet gemodelleerd kan worden.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag">Kenmerk 01</span>
+        <h3>Handmatige acceptatie</h3>
+        <p>Een acceptant leest het dossier en beoordeelt het risico zelf, in plaats van het door een rekenmodel te halen. Dat kost tijd en vakmanschap — en maakt maatwerk mogelijk.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Kenmerk 02</span>
+        <h3>Kleine, specialistische portefeuilles</h3>
+        <p>Weinig polissen per soort risico. Er is dus nauwelijks statistiek om op te sturen; de premie komt tot stand op basis van ervaring, herverzekering en een expliciete risico-inschatting.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Kenmerk 03</span>
+        <h3>Doorgaans hogere premie — soms juist lager</h3>
+        <p>Bijzondere risico's zijn meestal ook zwaardere risico's, dus is een hogere premie het logische gevolg en geen straf. Maar niet altijd. Reguliere verzekeraars wijzen liever niet hardop af en accepteren dan wél, tegen een stevig tarief én met beperktere voorwaarden: lagere limieten, meer uitsluitingen, een hoger eigen risico. Een gespecialiseerde partij die het risico echt beoordeelt, komt in zo'n geval soms lager uit — en met een ruimere dekking. Leg daarom altijd premie én voorwaarden naast elkaar; alleen de prijs vergelijken zegt hier weinig.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Kenmerk 04</span>
+        <h3>Bijna altijd via een adviseur</h3>
+        <p>Nicheaanbieders werken zelden rechtstreeks met consumenten. Het dossier moet worden opgebouwd en toegelicht; dat is precies het werk van een assurantietussenpersoon of financieel adviseur.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Kenmerk 05</span>
+        <h3>Vangnet, geen alternatief</h3>
+        <p>Een nichepartij is bedoeld voor wat elders niet terechtkan. Hele sectoren horen niet structureel afhankelijk te zijn van één vangnet — dat is een signaal dat de markt iets laat liggen.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Kenmerk 06</span>
+        <h3>Voorwaarden wijken af</h3>
+        <p>Lagere limieten, hogere eigen risico's, preventie-eisen, beperkte dekkingsonderdelen. Lees de polisvoorwaarden regel voor regel: hier zit het verschil, niet in de premie alleen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WAAROM ================= -->
+<section class="alt" id="waarom">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">02 — Oorzaken</span>
+      <h2>Vier redenen waarom een aanvraag strandt</h2>
+      <p class="lede">De afwijzingsgrond bepaalt de route. Weet je welke van de vier speelt, dan weet je meestal ook bij wie je moet zijn.</p>
+    </div>
+    <div class="grid g4">
+      <div class="cell">
+        <span class="tag">Grond A</span>
+        <h3>Het verleden van de aanvrager</h3>
+        <p>Fraude in het verleden, betalingsachterstanden, een strafrechtelijk verleden of een lange reeks schademeldingen. Het object is normaal, de persoon achter de aanvraag maakt het risico bijzonder.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Grond B</span>
+        <h3>De sector</h3>
+        <p>Een hele branche met een ongunstig schadeverloop: taxi's, bezorgbrommers, veetransport, recycling. Individueel valt er niets aan te merken, maar de bedrijfstak is voor veel verzekeraars niet rendabel.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Grond C</span>
+        <h3>Het object</h3>
+        <p>Uniek, zeldzaam, moeilijk te waarderen of te repareren. Denk aan een monumentaal en leegstaand pand, een historisch voertuig of een zelfgebouwde machine. Er is simpelweg geen vergelijkingsmateriaal.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Grond D</span>
+        <h3>De aansprakelijkheid</h3>
+        <p>Beroepen en activiteiten met een uitzonderlijk aansprakelijkheidsprofiel, van verloskundigen tot een rondreizend circus. Niet de omvang van het risico is het probleem, maar de staart ervan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUTER ================= -->
+<section id="router">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">03 — Hulpmiddel</span>
+      <h2>Risico-router</h2>
+      <p class="lede">Twee vragen, één richting. De uitkomst is een startpunt voor je gesprek met een adviseur — geen acceptatiebesluit en geen offerte.</p>
+    </div>
+
+    <div class="router" id="routerbox">
+      <div class="router-bar">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Dossieropbouw</span>
+        <span class="step" id="stepLabel">Vraag 1 van 2</span>
+      </div>
+      <div class="router-body" id="routerBody"></div>
+      <div id="resultBox"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUTES ================= -->
+<section class="alt" id="routes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">04 — De twee routes</span>
+      <h2>Nicheverzekeraar of nichevolmacht</h2>
+      <p class="lede">Het verschil zit in de rol. Een verzekeraar draagt het risico zelf. Een gevolmachtigd agent draagt het risico niet, maar handelt namens verzekeraars — en kan daardoor sneller een eigen product neerzetten.</p>
+    </div>
+
+    <div class="routes">
+      <article class="route-card">
+        <span class="label a">Nicheverzekeraar</span>
+        <h3>de Vereende</h3>
+        <div class="sub">Vangnetverzekeraar · schade · via de adviseur</div>
+        <p>De Vereende verzekert bijzondere en doorgaans hogere risico's die bij reguliere verzekeraars niet terechtkunnen. De organisatie heette tot 2016 Rialto Verzekeringen en daarvoor Terminus. Kernidee: individuele gevallen die nergens verzekerd kunnen worden, kunnen dat meestal wél hier.</p>
+        <ul>
+          <li>Motorrijtuigen en bijzondere voertuigen: quad op landbouwkenteken, brommobiel, golfkar, zware camper, taxi en koeriersdiensten</li>
+          <li>Particuliere polissen na een afwijzing of royement: auto, inboedel, woonhuis, aansprakelijkheid</li>
+          <li>Zakelijke risico's in branches met een zwaar schadeverloop</li>
+          <li>Ambachtelijke acceptatie voor unieke objecten waarvoor geen tariefmodel bestaat</li>
+          <li>Voert daarnaast publieke en collectieve taken uit, waaronder de directie van het Waarborgfonds Motorverkeer en het Nederlands Bureau der Motorrijtuigverzekeraars</li>
+        </ul>
+        <div class="foot">
+          <div class="meta">
+            <b>Aanvraag</b> — uitsluitend via een assurantieadviseur<br>
+            <b>Meer info</b> — <a href="https://vereende.nl" target="_blank" rel="noopener">vereende.nl</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="route-card">
+        <span class="label b">Nichevolmacht · volmacht boutique</span>
+        <h3>Hera Life</h3>
+        <div class="sub">Gevolmachtigd agent · leven, inkomen, schade &amp; garanties</div>
+        <p>Hera Life uit Den Haag ontwikkelt financiële producten voor particulieren, ondernemers en bedrijven en treedt daarbij op als gevolmachtigd agent voor diverse verzekeraars. De distributie loopt via assurantietussenpersonen en financieel adviseurs; daarnaast is er een eigen advieskantoor, het Hera Advies Centrum. De schaal is klein en de productlijnen zijn specialistisch — vandaar de term volmacht boutique.</p>
+        <ul>
+          <li>Overlijdensrisicoverzekering, inclusief collectieve varianten binnen de volmacht</li>
+          <li>Inkomens- en functieverliesdekkingen voor zzp'ers, werknemers en DGA's, waaronder Hera Zelfverzekerd en WIA-woonlastenoplossingen</li>
+          <li>Motorrijtuigen via schadevolmachten van buitenlandse verzekeraars</li>
+          <li>Bankgaranties bij de aankoop van een woning</li>
+          <li>Volmachten van onder meer Cardif-Assurances Risques Divers, Squarelife, Euroins, Maas Lloyd, Slavia pojišťovna en Monarch Assurance</li>
+        </ul>
+        <div class="foot">
+          <div class="meta">
+            <b>Aanvraag</b> — via adviseur of via Hera Advies Centrum<br>
+            <b>AFM-vergunning</b> — 12044880 &nbsp;·&nbsp; <b>Kifid</b> — 300.016792<br>
+            <b>Meer info</b> — <a href="https://heralife.nl" target="_blank" rel="noopener">heralife.nl</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:40px" class="tblwrap">
+      <table class="tbl">
+        <thead>
+          <tr><th>Onderwerp</th><th>Nicheverzekeraar</th><th>Nichevolmacht</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Wie draagt het risico</td><td>De verzekeraar zelf, op de eigen balans en onder toezicht van DNB.</td><td>De achterliggende verzekeraar. De volmacht handelt namens hem.</td></tr>
+          <tr><td>Wie accepteert</td><td>De eigen acceptatieafdeling.</td><td>De gevolmachtigde, binnen de grenzen van de volmachtovereenkomst.</td></tr>
+          <tr><td>Wie regelt de schade</td><td>De verzekeraar.</td><td>Meestal de gevolmachtigde, inclusief administratie en uitkering.</td></tr>
+          <tr><td>Toezicht</td><td>Prudentieel toezicht DNB, gedragstoezicht AFM.</td><td>Gedragstoezicht AFM op de volmacht; DNB-toezicht of markttoelating bij de verzekeraar.</td></tr>
+          <tr><td>Snelheid van productontwikkeling</td><td>Trager: elk product raakt de volledige verzekeraarsorganisatie.</td><td>Sneller: een klein team kan een propositie bouwen op bestaande capaciteit.</td></tr>
+          <tr><td>Typische inzet</td><td>Vangnet voor wat elders is afgewezen.</td><td>Maatwerkproduct dat regulier simpelweg niet bestaat.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOLMACHT ================= -->
+<section id="volmacht">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">05 — Uitleg</span>
+      <h2>Wat een gevolmachtigd agent precies doet</h2>
+      <p class="lede">Volmacht betekent dat een verzekeraar de bevoegdheid overdraagt om namens hem te handelen. In de praktijk neemt de gevolmachtigde vrijwel de hele polisketen over — alleen het risico blijft bij de verzekeraar.</p>
+    </div>
+    <div class="chain">
+      <div class="node"><span class="n">Schakel 1</span><strong>Acceptatie</strong><p>De gevolmachtigde beoordeelt de aanvraag en besluit zelf over acceptatie, binnen vooraf afgesproken grenzen voor bedrag, soort risico en voorwaarden.</p></div>
+      <div class="node"><span class="n">Schakel 2</span><strong>Polis en administratie</strong><p>Polis opmaken, muteren, prolongeren, premie incasseren en afdragen. De klant heeft één aanspreekpunt in plaats van twee.</p></div>
+      <div class="node"><span class="n">Schakel 3</span><strong>Schadeafwikkeling</strong><p>Melding aannemen, beoordelen, expertise inschakelen en uitkeren namens de verzekeraar — binnen de mandaatgrenzen.</p></div>
+      <div class="node"><span class="n">Schakel 4</span><strong>Verantwoording</strong><p>Terugkoppeling aan de verzekeraar, audits en toetsing op naleving. Een volmacht is een doorlopend gecontroleerde bevoegdheid, geen blanco cheque.</p></div>
+    </div>
+    <div style="margin-top:36px;max-width:70ch">
+      <p><strong>Waarom dit voor niche uitmaakt.</strong> Een verzekeraar die zelf geen afdeling wil opzetten voor een klein, specialistisch segment, kan het mandaat geven aan een partij die dat wél doet. Zo ontstaan producten die anders nooit gebouwd zouden worden: een collectieve overlijdensrisicoverzekering, een uitkering bij verlies van een lichaamsfunctie voor de zzp'er in de bouw, een bankgarantie met een acceptatie op dezelfde dag.</p>
+      <p><strong>Waar je op let bij een volmachtpartij.</strong> Welke verzekeraars staan erachter en onder welk toezicht vallen zij? Hoe ver reikt het mandaat — mag de gevolmachtigde ook schade afwikkelen? Wat gebeurt er met je polis als de volmacht eindigt? Deze vragen horen aan de voorkant beantwoord te worden, niet bij de eerste schade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BANKGARANTIE ================= -->
+<section class="alt" id="bankgarantie">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">06 — Aangrenzend product</span>
+      <h2>Bankgarantie: geen verzekering, wel maatwerk</h2>
+      <p class="lede">Bij de aankoop van een woning eist de koopovereenkomst vrijwel altijd een waarborgsom van tien procent, of een bankgarantie in plaats daarvan. Wie dat bedrag niet wil vastzetten, koopt in feite een garantstelling. Ook dit werk zit bij nichepartijen, waaronder Hera Life.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag">Hoe het werkt</span>
+        <h3>Garantstelling in plaats van geld</h3>
+        <p>De garantsteller belooft de notaris het garantiebedrag te betalen als jij je verplichtingen niet nakomt. Betaalt hij uit, dan moet jij dat bedrag terugbetalen — bij Hera Life binnen 30 dagen, daarna komen rente en kosten erbij.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Wat je aanlevert</span>
+        <h3>Enkele vragen plus de koopakte</h3>
+        <p>De aanvraag is bewust kort. Bij een garantstelling tot <strong>€ 125.000,00</strong> op een bestaande woning bestemd voor eigen bewoning kan de aanvraag automatisch worden geaccepteerd. Voor nieuwbouw gelden extra voorwaarden, zoals een koop-/aannemingsovereenkomst.</p>
+      </div>
+      <div class="cell">
+        <span class="tag">Wat het kost</span>
+        <h3>Vast tarief, geen percentage</h3>
+        <p>Hera Life kent twee varianten: een nettovariant van <strong>€ 175,00</strong> en een variant van <strong>€ 300,00</strong>. Loopt de garantie langer dan een jaar, dan komt er per extra dag een kleine opslag bij. Tarieven kunnen wijzigen — controleer altijd het actuele tarief bij de aanbieder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRAKTIJK ================= -->
+<section id="praktijk">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">07 — Uit de praktijk</span>
+      <h2>Wat er werkelijk op de acceptatietafel belandt</h2>
+      <p class="lede">Geen bedachte voorbeelden. Dit is het soort aanvraag waarvoor het nichesegment bestaat.</p>
+    </div>
+    <div class="grid g3">
+      <div class="cell"><span class="tag">Object</span><h3>Leegstaande watertoren</h3><p>Monumentaal, leeg, bestemmingsplan nog niet aangepast, dus voorlopig geen bewoning toegestaan. Juist dan is een brandverzekering geen luxe — en juist dan wijst vrijwel iedereen af.</p></div>
+      <div class="cell"><span class="tag">Object</span><h3>Antieke stoomtrein</h3><p>Er zijn in Nederland verzamelaars van historische stoomtreintjes die er ook echt mee willen rijden. Verzekeringstechnisch valt zo'n voertuig buiten elk bestaand kader.</p></div>
+      <div class="cell"><span class="tag">Aansprakelijkheid</span><h3>Klein rondreizend circus</h3><p>Een aansprakelijkheidsverzekering voor bedrijven is onmisbaar, maar de acts zelf zijn precies de reden dat de standaardmarkt afhaakt.</p></div>
+      <div class="cell"><span class="tag">Sector</span><h3>Taxi en bezorgvervoer</h3><p>Veel kilometers, veel schades, krappe marges. Individuele bedrijven met een prima schadeverleden lopen mee in het sectorbeeld.</p></div>
+      <div class="cell"><span class="tag">Sector</span><h3>Veetransport en recycling</h3><p>Adviseurs melden dat ondernemers in minder gangbare bedrijfstakken steeds moeilijker onderdak vinden — terwijl de risico's op zichzelf niet uitzonderlijk zijn.</p></div>
+      <div class="cell"><span class="tag">Beroep</span><h3>Verloskundigen</h3><p>Een gerespecteerd beroep met een zwaar aansprakelijkheidsprofiel. Het bewijs dat verzekerbaarheid en respectabiliteit twee verschillende dingen zijn.</p></div>
+      <div class="cell"><span class="tag">Voertuig</span><h3>Quad, golfkar, brommobiel</h3><p>Voertuigen die tussen de categorieën in vallen, particulier of zakelijk gebruikt, met kentekens waar standaardsystemen niet mee overweg kunnen.</p></div>
+      <div class="cell"><span class="tag">Persoon</span><h3>Zzp'er die met zijn handen werkt</h3><p>Stukadoors, dakdekkers, elektriciens. Een volledige arbeidsongeschiktheidsverzekering is vaak te duur; een dekking bij functieverlies met een eenmalige uitkering kan een tussenweg zijn.</p></div>
+      <div class="cell"><span class="tag">Uniek</span><h3>Eenmalige projecten</h3><p>Testritten voor een metrolijn, een amfibievoertuig dat bij overstromingen kinderen naar school brengt. Eén exemplaar, geen historie, geen tarief.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">08 — Veelgestelde vragen</span>
+      <h2>Wat mensen echt willen weten</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Ik ben afgewezen. Ben ik nu overal afgewezen?</summary>
+        <div class="ans"><p>Nee. Acceptatiebeleid verschilt sterk per verzekeraar en per moment. Een afwijzing zegt iets over het beleid van die ene partij, niet over jouw verzekerbaarheid in het algemeen. Vraag wel altijd naar de afwijzingsgrond: die bepaalt welke route kansrijk is.</p></div>
+      </details>
+      <details>
+        <summary>Moet ik een afwijzing melden bij een volgende aanvraag?</summary>
+        <div class="ans"><p>Ja. Op vrijwel elk aanvraagformulier staat een slotvraag over eerdere weigeringen, opzeggingen en registraties. Verzwijgen is de snelste manier om een dekking later kwijt te raken. Volledigheid aan de voorkant is in dit segment de belangrijkste succesfactor.</p></div>
+      </details>
+      <details>
+        <summary>Waarom is de premie zoveel hoger?</summary>
+        <div class="ans"><p>Omdat het risico dat wordt overgenomen groter of onzekerder is, en omdat de acceptatie handwerk is in plaats van geautomatiseerd. Bij een uniek object ontbreekt bovendien de statistiek om scherp te kunnen calculeren; die onzekerheid zit in de premie verwerkt.</p></div>
+      </details>
+      <details>
+        <summary>Blijf ik voor altijd in het nichesegment zitten?</summary>
+        <div class="ans"><p>Meestal niet. Registraties en schadeverledens hebben een looptijd. Laat je polis periodiek toetsen: na een aantal schadevrije jaren is terugkeer naar de reguliere markt vaak mogelijk, met een lagere premie als gevolg.</p></div>
+      </details>
+      <details>
+        <summary>Kan ik rechtstreeks aanvragen, zonder adviseur?</summary>
+        <div class="ans"><p>Bij de Vereende lopen aanvragen via een adviseur. Producten van Hera Life worden gedistribueerd via assurantietussenpersonen en financieel adviseurs, met daarnaast een eigen advieskantoor. Voor niet-standaard risico's is een adviseur ook inhoudelijk verstandig: de dossieropbouw bepaalt grotendeels de uitkomst.</p></div>
+      </details>
+      <details>
+        <summary>Wat is het verschil tussen een volmacht en een tussenpersoon?</summary>
+        <div class="ans"><p>Een tussenpersoon adviseert en bemiddelt, maar beslist niet over acceptatie. Een gevolmachtigd agent beslist wél — namens de verzekeraar en binnen de grenzen van de volmacht — en regelt daarnaast administratie en vaak ook schade.</p></div>
+      </details>
+      <details>
+        <summary>Is een buitenlandse verzekeraar achter een volmacht een probleem?</summary>
+        <div class="ans"><p>Niet per definitie. Verzekeraars uit andere EER-landen mogen op de Nederlandse markt actief zijn onder toezicht van hun eigen toezichthouder, al dan niet via een Nederlandse markttoelating. Wel relevant: vraag naar de naam van de risicodrager, het toezichtregime en de klachtenroute, en controleer of de partij is aangesloten bij Kifid.</p></div>
+      </details>
+      <details>
+        <summary>Is een bankgarantie een verzekering?</summary>
+        <div class="ans"><p>Nee. Het is een garantstelling. Wordt er uitbetaald aan de notaris, dan moet jij dat bedrag terugbetalen aan de garantsteller. Een verzekering keert uit zonder terugbetalingsverplichting; een garantie schuift het betalingsmoment op.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DISCLAIMER ================= -->
+<section id="voorwaarden">
+  <div class="wrap">
+    <div class="notice">
+      <div class="h">Belangrijk — lees dit voordat je iets aanvraagt</div>
+      <p>Deze site geeft algemene informatie over het nichesegment in de Nederlandse verzekeringsmarkt. Het is <strong>geen financieel advies</strong>, geen aanbod en geen bemiddeling in de zin van de Wet op het financieel toezicht. Er wordt op deze site niet vergeleken op premie of voorwaarden en er worden geen producten aangeboden.</p>
+      <p>Genoemde partijen, producten, tarieven, acceptatiegrenzen en volmachten zijn beschrijvend opgenomen op basis van openbare informatie en kunnen zijn gewijzigd. Aan de inhoud kunnen geen rechten worden ontleend. Raadpleeg altijd de actuele productinformatie, de polisvoorwaarden en het informatiedocument van de aanbieder zelf.</p>
+      <p>Voor persoonlijk advies of het afsluiten van een verzekering schakel je een financieel adviseur of assurantietussenpersoon in met een passende AFM-vergunning. Vergunningnummers en Kifid-aansluitnummers op deze site horen bij de betreffende aanbieder, niet bij deze site.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Op deze site</h4>
+        <ul>
+          <li><a href="#wat">Wat is een nicheverzekering</a></li>
+          <li><a href="#waarom">Redenen voor afwijzing</a></li>
+          <li><a href="#router">Risico-router</a></li>
+          <li><a href="#praktijk">Praktijkvoorbeelden</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nicheverzekeraar</h4>
+        <ul>
+          <li><a href="https://vereende.nl" target="_blank" rel="noopener">de Vereende</a></li>
+          <li><a href="https://vereende.nl/kenniscentrum/" target="_blank" rel="noopener">Kenniscentrum</a></li>
+          <li><a href="https://vereende.nl/waarborgfonds-motorverkeer/" target="_blank" rel="noopener">Waarborgfonds Motorverkeer</a></li>
+          <li><a href="https://vereende.nl/nlbureau/" target="_blank" rel="noopener">Nederlands Bureau</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nichevolmacht</h4>
+        <ul>
+          <li><a href="https://heralife.nl" target="_blank" rel="noopener">Hera Life</a></li>
+          <li><a href="https://heralife.nl/over-hera-life/" target="_blank" rel="noopener">Over Hera Life</a></li>
+          <li><a href="https://heralife.nl/bankgarantie-2/" target="_blank" rel="noopener">Bankgarantie</a></li>
+          <li><a href="https://heralife.nl/veelgestelde-vragen/" target="_blank" rel="noopener">Veelgestelde vragen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Toezicht en klachten</h4>
+        <ul>
+          <li><a href="https://www.afm.nl" target="_blank" rel="noopener">AFM — vergunningregister</a></li>
+          <li><a href="https://www.dnb.nl" target="_blank" rel="noopener">DNB — registers</a></li>
+          <li><a href="https://www.kifid.nl" target="_blank" rel="noopener">Kifid — klachteninstituut</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbottom">
+      Onafhankelijke kennispagina over nicheverzekeringen · Geen aanbieder, geen bemiddelaar, geen vergelijker<br>
+      Informatie is algemeen van aard en kan verouderen. Controleer altijd de bron van de aanbieder.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var Q1 = {
+    q: "Wat moet er verzekerd of geregeld worden?",
+    opts: [
+      {k:"A", t:"Motorrijtuig of bijzonder voertuig", v:"voertuig"},
+      {k:"B", t:"Particuliere polis: woonhuis, inboedel, aansprakelijkheid", v:"particulier"},
+      {k:"C", t:"Bedrijfsrisico in een lastige branche", v:"zakelijk"},
+      {k:"D", t:"Overlijdensrisico of inkomen bij uitval", v:"leven"},
+      {k:"E", t:"Bankgarantie bij aankoop van een woning", v:"garantie"},
+      {k:"F", t:"Een product dat regulier niet bestaat", v:"maatwerk"}
+    ]
+  };
+
+  var Q2 = {
+    q: "Waarom lukt het niet via de gebruikelijke weg?",
+    opts: [
+      {k:"A", t:"Eerdere afwijzing, opzegging of royement", v:"afwijzing"},
+      {k:"B", t:"Het verleden van de aanvrager", v:"verleden"},
+      {k:"C", t:"Het object is uniek of moeilijk te waarderen", v:"object"},
+      {k:"D", t:"Er bestaat gewoon geen passend product", v:"leemte"}
+    ]
+  };
+
+  var ROUTES = {
+    vereende: {
+      route:"Route — Nicheverzekeraar",
+      title:"de Vereende",
+      why:"Dit is een vangnetvraag: het risico bestaat wel, maar past niet in een standaard acceptatiemodel. De Vereende accepteert dit soort dossiers handmatig.",
+      prep:[
+        "Vraag de afwijzingsgrond schriftelijk op bij de vorige verzekeraar",
+        "Zet het schadeverleden van de laatste vijf jaar op een rij, inclusief bedragen",
+        "Beschrijf het object of de activiteit feitelijk: gebruik, locatie, frequentie, waarde",
+        "Meld eventuele registraties actief — verzwijgen kost je later de dekking",
+        "Loop de aanvraag via een assurantieadviseur; rechtstreeks aanvragen is hier niet de route"
+      ],
+      link:"https://vereende.nl", linktxt:"vereende.nl"
+    },
+    hera: {
+      route:"Route — Nichevolmacht · volmacht boutique",
+      title:"Hera Life",
+      why:"Hier is niet zozeer sprake van een afwijzing, maar van een leemte: het product dat je nodig hebt, bestaat regulier niet of niet in deze vorm. Een gevolmachtigd agent kan zo'n propositie bouwen op de capaciteit van achterliggende verzekeraars.",
+      prep:[
+        "Formuleer eerst het doel, niet het product: welk bedrag moet wanneer beschikbaar zijn, en voor wie",
+        "Breng je bestaande dekkingen in kaart om dubbele of ontbrekende dekking te zien",
+        "Vraag naar de risicodrager achter de volmacht en het toezicht waaronder die valt",
+        "Controleer de acceptatiegrenzen: leeftijd, verzekerd bedrag, looptijd, beroep",
+        "Lees de uitsluitingen vóór de premie — daar zit het verschil met een standaardproduct"
+      ],
+      link:"https://heralife.nl", linktxt:"heralife.nl"
+    },
+    beide: {
+      route:"Route — Eerst uitzoeken welke van twee",
+      title:"Vereende én Hera Life zijn beide denkbaar",
+      why:"Je vraag kan zowel een vangnetvraag als een maatwerkvraag zijn. De afwijzingsgrond is bepalend: gaat het om een risico dat is geweigerd, dan ligt de nicheverzekeraar voor de hand; gaat het om een product dat niet bestaat, dan de volmacht.",
+      prep:[
+        "Achterhaal eerst of er sprake is van een afwijzing of van een ontbrekend product",
+        "Leg je situatie voor aan een adviseur die beide routes kan aanvragen",
+        "Verzamel alvast: aanvraaggegevens, schadeverleden, objectbeschrijving en gewenste dekking"
+      ],
+      link:"#routes", linktxt:"Vergelijk de twee routes"
+    }
+  };
+
+  function decide(a1, a2){
+    if(a1 === "garantie") return "hera";
+    if(a1 === "leven") return "hera";
+    if(a1 === "maatwerk") return a2 === "leemte" ? "hera" : "beide";
+    if(a1 === "voertuig" || a1 === "particulier") return "vereende";
+    if(a1 === "zakelijk") return a2 === "leemte" ? "beide" : "vereende";
+    return "beide";
+  }
+
+  var body = document.getElementById("routerBody");
+  var resultBox = document.getElementById("resultBox");
+  var stepLabel = document.getElementById("stepLabel");
+  var state = { a1:null, a2:null };
+
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  function renderQuestion(q, handler, stepText){
+    stepLabel.textContent = stepText;
+    resultBox.innerHTML = "";
+    var html = '<p class="q">' + esc(q.q) + '</p><div class="opts">';
+    for(var i=0;i<q.opts.length;i++){
+      var o = q.opts[i];
+      html += '<button type="button" class="opt" data-v="'+esc(o.v)+'"><span class="k">'+esc(o.k)+'</span><span>'+esc(o.t)+'</span></button>';
+    }
+    html += '</div>';
+    body.innerHTML = html;
+    var btns = body.querySelectorAll(".opt");
+    for(var j=0;j<btns.length;j++){
+      btns[j].addEventListener("click", function(e){
+        handler(e.currentTarget.getAttribute("data-v"));
+      });
+    }
+    var first = body.querySelector(".opt");
+    if(first && document.activeElement && document.activeElement.classList.contains("opt")) first.focus();
+  }
+
+  function renderResult(){
+    var r = ROUTES[decide(state.a1, state.a2)];
+    stepLabel.textContent = "Uitkomst";
+    body.innerHTML = '<p class="q" style="margin-bottom:14px">Op basis van je antwoorden</p>' +
+      '<p style="font-size:15px;color:var(--ink-70);margin:0">Dit is een richting, geen acceptatiebesluit. De uiteindelijke beoordeling doet de aanbieder, op basis van het volledige dossier.</p>';
+    var html = '<div class="result">' +
+      '<div class="route">' + esc(r.route) + '</div>' +
+      '<h3>' + esc(r.title) + '</h3>' +
+      '<div class="why">' + esc(r.why) + '</div>' +
+      '<p class="prep-label">Wat je klaarlegt</p><ul>';
+    for(var i=0;i<r.prep.length;i++){ html += '<li>' + esc(r.prep[i]) + '</li>'; }
+    html += '</ul><div style="display:flex;flex-wrap:wrap;gap:10px">' +
+      '<a class="btn primary" href="' + esc(r.link) + '"' + (r.link.charAt(0)==="#" ? '' : ' target="_blank" rel="noopener"') + '>' + esc(r.linktxt) + '</a>' +
+      '<button type="button" class="btn" id="againBtn">Opnieuw beginnen</button>' +
+      '</div></div>';
+    resultBox.innerHTML = html;
+    document.getElementById("againBtn").addEventListener("click", start);
+    var h = resultBox.querySelector(".result h3");
+    h.setAttribute("tabindex","-1");
+    h.focus();
+  }
+
+  function start(){
+    state.a1 = null; state.a2 = null;
+    renderQuestion(Q1, function(v){
+      state.a1 = v;
+      renderQuestion(Q2, function(v2){
+        state.a2 = v2;
+        renderResult();
+      }, "Vraag 2 van 2");
+    }, "Vraag 1 van 2");
+  }
+
+  start();
+})();
+</script>
+</body>
+</html>
